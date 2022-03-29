@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-gh9_=9t#3352ydt3-g+!%g@ek6ddl-ba21i@=3z=492bdwxc7k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.200.222']
+# ALLOWED_HOSTS = ['192.168.200.222']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api_restt',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -74,13 +76,24 @@ WSGI_APPLICATION = 'myapplikasi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'dbivory',
+# 	    'USER': 'gho',
+# 	    'PASSWORD':'ghosam',
+# 	    'HOST':'192.168.200.222',
+# 	    'PORT':'3306',
+#     }
+# }
+# batas database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dbivory',
-	    'USER': 'gho',
-	    'PASSWORD':'ghosam',
-	    'HOST':'192.168.200.222',
+	    'USER': 'root',
+	    'PASSWORD':'',
+	    'HOST':'localhost',
 	    'PORT':'3306',
     }
 }
